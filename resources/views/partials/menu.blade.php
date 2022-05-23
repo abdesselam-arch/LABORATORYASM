@@ -2,7 +2,7 @@
 
     <div class="c-sidebar-brand d-md-down-none">
         <a class="c-sidebar-brand-full h4" href="#">
-            {{ trans('panel.site_title') }}
+            {{ trans('LABORATORY ASM') }}
         </a>
     </div>
 
