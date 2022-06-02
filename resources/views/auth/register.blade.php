@@ -7,7 +7,7 @@
         <div class="card mx-4">
             <div class="card-body p-4">
 
-                <form method="POST" action="{{ route('register') }}">
+                <form class="singn-form" method="POST" action="{{ route('register') }}">
                     {{ csrf_field() }}
 
                     <h1>{{ trans('LABORATORY ASM') }}</h1>
