@@ -4,12 +4,13 @@ namespace Database\Seeders;
 
 use App\Models\Permission;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class PermissionsTableSeeder extends Seeder
 {
     public function run()
     {
-        /*$permissions = [
+        DB::table('permissions')->insert([
             [
                 'id'    => 1,
                 'title' => 'user_management_access',
@@ -138,8 +139,6 @@ class PermissionsTableSeeder extends Seeder
                 'id'    => 32,
                 'title' => 'profile_password_edit',
             ],
-        ];*/
-
-        //Permission::insert($permissions);
+        ]);
     }
 }

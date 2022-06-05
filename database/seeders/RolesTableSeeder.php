@@ -4,12 +4,13 @@ namespace Database\Seeders;
 
 use App\Models\Role;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class RolesTableSeeder extends Seeder
 {
     public function run()
     {
-        /*$roles = [
+        DB::table('roles')->insert([
             [
                 'id'    => 1,
                 'title' => 'Admin',
@@ -18,8 +19,6 @@ class RolesTableSeeder extends Seeder
                 'id'    => 2,
                 'title' => 'User',
             ],
-        ];
-
-        Role::insert($roles);*/
+        ]);
     }
 }

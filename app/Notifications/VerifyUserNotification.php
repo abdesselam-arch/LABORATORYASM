@@ -34,5 +34,6 @@ class VerifyUserNotification extends Notification
     public function toArray($notifiable)
     {
         return [];
+
     }
 }
