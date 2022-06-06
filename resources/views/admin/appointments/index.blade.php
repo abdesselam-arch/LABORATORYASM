@@ -4,14 +4,14 @@
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
             <a class="btn btn-success" href="{{ route('admin.appointments.create') }}">
-                {{ trans('global.add') }} {{ trans('cruds.appointment.title_singular') }}
+                {{ trans('Add') }} {{ trans('appointment') }}
             </a>
         </div>
     </div>
 @endcan
 <div class="card">
     <div class="card-header">
-        {{ trans('cruds.appointment.title_singular') }} {{ trans('global.list') }}
+        {{ trans('Appointments') }} {{ trans('list') }}
     </div>
 
     <div class="card-body">
@@ -22,25 +22,25 @@
 
                     </th>
                     <th>
-                        {{ trans('cruds.appointment.fields.id') }}
+                        {{ trans('id') }}
                     </th>
                     <th>
-                        {{ trans('cruds.appointment.fields.client') }}
+                        {{ trans('patient') }}
                     </th>
                     <th>
-                        {{ trans('cruds.appointment.fields.admin') }}
+                        {{ trans('admin') }}
                     </th>
                     <th>
-                        {{ trans('cruds.appointment.fields.start_time') }}
+                        {{ trans('start time') }}
                     </th>
                     <th>
-                        {{ trans('cruds.appointment.fields.finish_time') }}
+                        {{ trans('finish time') }}
                     </th>
                     <th>
-                        {{ trans('cruds.appointment.fields.tests') }}
+                        {{ trans('tests') }}
                     </th>
                     <th>
-                        {{ trans('cruds.appointment.fields.comments') }}
+                        {{ trans('comments') }}
                     </th>
                     <th>
                         &nbsp;
@@ -116,7 +116,7 @@
       $($.fn.dataTable.tables(true)).DataTable()
           .columns.adjust();
   });
-  
+
 });
 
 </script>

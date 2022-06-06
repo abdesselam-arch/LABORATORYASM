@@ -4,14 +4,14 @@
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
             <a class="btn btn-success" href="{{ route('admin.tests.create') }}">
-                {{ trans('global.add') }} {{ trans('cruds.test.title_singular') }}
+                {{ trans('add') }} {{ trans('test') }}
             </a>
         </div>
     </div>
 @endcan
 <div class="card">
     <div class="card-header">
-        {{ trans('cruds.test.title_singular') }} {{ trans('global.list') }}
+        {{ trans('test') }} {{ trans('list') }}
     </div>
 
     <div class="card-body">
@@ -22,16 +22,16 @@
 
                     </th>
                     <th>
-                        {{ trans('cruds.test.fields.id') }}
+                        {{ trans('Id') }}
                     </th>
                     <th>
-                        {{ trans('cruds.test.fields.name') }}
+                        {{ trans('Name') }}
                     </th>
                     <th>
-                        {{ trans('cruds.test.fields.price') }}
+                        {{ trans('Price') }}
                     </th>
                     <th>
-                        {{ trans('cruds.test.fields.type') }}
+                        {{ trans('Type') }}
                     </th>
                     <th>
                         &nbsp;
@@ -51,7 +51,7 @@
     $(function () {
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
 @can('test_delete')
-  let deleteButtonTrans = '{{ trans('global.datatables.delete') }}';
+  let deleteButtonTrans = '{{ trans('delete') }}';
   let deleteButton = {
     text: deleteButtonTrans,
     url: "{{ route('admin.tests.massDestroy') }}",
@@ -62,12 +62,12 @@
       });
 
       if (ids.length === 0) {
-        alert('{{ trans('global.datatables.zero_selected') }}')
+        alert('{{ trans('zero selected') }}')
 
         return
       }
 
-      if (confirm('{{ trans('global.areYouSure') }}')) {
+      if (confirm('{{ trans('are you sure !') }}')) {
         $.ajax({
           headers: {'x-csrf-token': _token},
           method: 'POST',
@@ -93,7 +93,7 @@
 { data: 'name', name: 'name' },
 { data: 'price', name: 'price' },
 { data: 'type', name: 'type' },
-{ data: 'actions', name: '{{ trans('global.actions') }}' }
+{ data: 'actions', name: '{{ trans('actions') }}' }
     ],
     orderCellsTop: true,
     order: [[ 1, 'desc' ]],
@@ -104,7 +104,7 @@
       $($.fn.dataTable.tables(true)).DataTable()
           .columns.adjust();
   });
-  
+
 });
 
 </script>

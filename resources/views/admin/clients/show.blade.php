@@ -3,21 +3,21 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} {{ trans('cruds.client.title') }}
+        {{ trans('Show') }} {{ trans('patient') }}
     </div>
 
     <div class="card-body">
         <div class="form-group">
             <div class="form-group">
                 <a class="btn btn-default" href="{{ route('admin.clients.index') }}">
-                    {{ trans('global.back_to_list') }}
+                    {{ trans('back to list') }}
                 </a>
             </div>
             <table class="table table-bordered table-striped">
                 <tbody>
                     <tr>
                         <th>
-                            {{ trans('cruds.client.fields.id') }}
+                            {{ trans('Patient id') }}
                         </th>
                         <td>
                             {{ $client->id }}
@@ -25,7 +25,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.client.fields.name') }}
+                            {{ trans('Patient name') }}
                         </th>
                         <td>
                             {{ $client->name }}
@@ -33,7 +33,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.client.fields.email') }}
+                            {{ trans('Patient email') }}
                         </th>
                         <td>
                             {{ $client->email }}
@@ -41,7 +41,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.client.fields.phone') }}
+                            {{ trans('Patient phone') }}
                         </th>
                         <td>
                             {{ $client->phone }}
@@ -51,7 +51,7 @@
             </table>
             <div class="form-group">
                 <a class="btn btn-default" href="{{ route('admin.clients.index') }}">
-                    {{ trans('global.back_to_list') }}
+                    {{ trans('back to list') }}
                 </a>
             </div>
         </div>

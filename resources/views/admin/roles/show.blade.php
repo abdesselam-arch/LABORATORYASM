@@ -3,21 +3,21 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} {{ trans('cruds.role.title') }}
+        {{ trans('show') }} {{ trans('role') }}
     </div>
 
     <div class="card-body">
         <div class="form-group">
             <div class="form-group">
                 <a class="btn btn-default" href="{{ route('admin.roles.index') }}">
-                    {{ trans('global.back_to_list') }}
+                    {{ trans('back to list') }}
                 </a>
             </div>
             <table class="table table-bordered table-striped">
                 <tbody>
                     <tr>
                         <th>
-                            {{ trans('cruds.role.fields.id') }}
+                            {{ trans('role id') }}
                         </th>
                         <td>
                             {{ $role->id }}
@@ -25,7 +25,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.role.fields.title') }}
+                            {{ trans('title') }}
                         </th>
                         <td>
                             {{ $role->title }}
@@ -33,7 +33,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.role.fields.permissions') }}
+                            {{ trans('permissions') }}
                         </th>
                         <td>
                             @foreach($role->permissions as $key => $permissions)
@@ -45,7 +45,7 @@
             </table>
             <div class="form-group">
                 <a class="btn btn-default" href="{{ route('admin.roles.index') }}">
-                    {{ trans('global.back_to_list') }}
+                    {{ trans('back to list') }}
                 </a>
             </div>
         </div>

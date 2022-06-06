@@ -4,14 +4,14 @@
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
             <a class="btn btn-success" href="{{ route('admin.clients.create') }}">
-                {{ trans('global.add') }} {{ trans('cruds.client.title_singular') }}
+                {{ trans('Add') }} {{ trans('patient') }}
             </a>
         </div>
     </div>
 @endcan
 <div class="card">
     <div class="card-header">
-        {{ trans('cruds.client.title_singular') }} {{ trans('global.list') }}
+        {{ trans('Patient') }} {{ trans('list') }}
     </div>
 
     <div class="card-body">
@@ -22,16 +22,16 @@
 
                     </th>
                     <th>
-                        {{ trans('cruds.client.fields.id') }}
+                        {{ trans('Patient id') }}
                     </th>
                     <th>
-                        {{ trans('cruds.client.fields.name') }}
+                        {{ trans('Patient name') }}
                     </th>
                     <th>
-                        {{ trans('cruds.client.fields.email') }}
+                        {{ trans('Patient email') }}
                     </th>
                     <th>
-                        {{ trans('cruds.client.fields.phone') }}
+                        {{ trans('Patient phone') }}
                     </th>
                     <th>
                         &nbsp;
@@ -104,7 +104,7 @@
       $($.fn.dataTable.tables(true)).DataTable()
           .columns.adjust();
   });
-  
+
 });
 
 </script>

@@ -3,21 +3,21 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} {{ trans('cruds.test.title') }}
+        {{ trans('Show') }} {{ trans('test') }}
     </div>
 
     <div class="card-body">
         <div class="form-group">
             <div class="form-group">
                 <a class="btn btn-default" href="{{ route('admin.tests.index') }}">
-                    {{ trans('global.back_to_list') }}
+                    {{ trans('back to list') }}
                 </a>
             </div>
             <table class="table table-bordered table-striped">
                 <tbody>
                     <tr>
                         <th>
-                            {{ trans('cruds.test.fields.id') }}
+                            {{ trans('Id') }}
                         </th>
                         <td>
                             {{ $test->id }}
@@ -25,7 +25,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.test.fields.name') }}
+                            {{ trans('Name') }}
                         </th>
                         <td>
                             {{ $test->name }}
@@ -33,7 +33,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.test.fields.price') }}
+                            {{ trans('Price') }}
                         </th>
                         <td>
                             {{ $test->price }}
@@ -41,7 +41,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.test.fields.type') }}
+                            {{ trans('Type') }}
                         </th>
                         <td>
                             {{ $test->type }}
@@ -51,7 +51,7 @@
             </table>
             <div class="form-group">
                 <a class="btn btn-default" href="{{ route('admin.tests.index') }}">
-                    {{ trans('global.back_to_list') }}
+                    {{ trans('back to list') }}
                 </a>
             </div>
         </div>

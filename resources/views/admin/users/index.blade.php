@@ -4,14 +4,14 @@
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
             <a class="btn btn-success" href="{{ route('admin.users.create') }}">
-                {{ trans('global.add') }} {{ trans('cruds.user.title_singular') }}
+                {{ trans('Add') }} {{ trans('User') }}
             </a>
         </div>
     </div>
 @endcan
 <div class="card">
     <div class="card-header">
-        {{ trans('cruds.user.title_singular') }} {{ trans('global.list') }}
+        {{ trans('Users') }} {{ trans('list') }}
     </div>
 
     <div class="card-body">
@@ -22,22 +22,22 @@
 
                     </th>
                     <th>
-                        {{ trans('cruds.user.fields.id') }}
+                        {{ trans('Id') }}
                     </th>
                     <th>
-                        {{ trans('cruds.user.fields.name') }}
+                        {{ trans('Name') }}
                     </th>
                     <th>
-                        {{ trans('cruds.user.fields.email') }}
+                        {{ trans('Email') }}
                     </th>
                     <th>
-                        {{ trans('cruds.user.fields.email_verified_at') }}
+                        {{ trans('Email verified at') }}
                     </th>
                     <th>
-                        {{ trans('cruds.user.fields.verified') }}
+                        {{ trans('User verified') }}
                     </th>
                     <th>
-                        {{ trans('cruds.user.fields.roles') }}
+                        {{ trans('role') }}
                     </th>
                     <th>
                         &nbsp;
@@ -57,7 +57,7 @@
     $(function () {
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
 @can('user_delete')
-  let deleteButtonTrans = '{{ trans('global.datatables.delete') }}';
+  let deleteButtonTrans = '{{ trans('delete') }}';
   let deleteButton = {
     text: deleteButtonTrans,
     url: "{{ route('admin.users.massDestroy') }}",
@@ -68,12 +68,12 @@
       });
 
       if (ids.length === 0) {
-        alert('{{ trans('global.datatables.zero_selected') }}')
+        alert('{{ trans('zero selected') }}')
 
         return
       }
 
-      if (confirm('{{ trans('global.areYouSure') }}')) {
+      if (confirm('{{ trans('Are you sure !') }}')) {
         $.ajax({
           headers: {'x-csrf-token': _token},
           method: 'POST',
@@ -101,7 +101,7 @@
 { data: 'email_verified_at', name: 'email_verified_at' },
 { data: 'verified', name: 'verified' },
 { data: 'roles', name: 'roles.title' },
-{ data: 'actions', name: '{{ trans('global.actions') }}' }
+{ data: 'actions', name: '{{ trans('actions') }}' }
     ],
     orderCellsTop: true,
     order: [[ 1, 'desc' ]],
@@ -112,7 +112,7 @@
       $($.fn.dataTable.tables(true)).DataTable()
           .columns.adjust();
   });
-  
+
 });
 
 </script>

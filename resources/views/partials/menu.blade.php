@@ -12,7 +12,7 @@
                 <i class="c-sidebar-nav-icon fas fa-fw fa-tachometer-alt">
 
                 </i>
-                {{ trans('global.dashboard') }}
+                {{ trans('Dashboard') }}
             </a>
         </li>
         @can('user_management_access')
@@ -21,7 +21,7 @@
                     <i class="fa-fw fas fa-users c-sidebar-nav-icon">
 
                     </i>
-                    {{ trans('cruds.userManagement.title') }}
+                    {{ trans('user Management') }}
                 </a>
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('permission_access')
@@ -30,7 +30,7 @@
                                 <i class="fa-fw fas fa-unlock-alt c-sidebar-nav-icon">
 
                                 </i>
-                                {{ trans('cruds.permission.title') }}
+                                {{ trans('Permissions') }}
                             </a>
                         </li>
                     @endcan
@@ -40,7 +40,7 @@
                                 <i class="fa-fw fas fa-briefcase c-sidebar-nav-icon">
 
                                 </i>
-                                {{ trans('cruds.role.title') }}
+                                {{ trans('Roles') }}
                             </a>
                         </li>
                     @endcan
@@ -50,7 +50,7 @@
                                 <i class="fa-fw fas fa-user c-sidebar-nav-icon">
 
                                 </i>
-                                {{ trans('cruds.user.title') }}
+                                {{ trans('Users') }}
                             </a>
                         </li>
                     @endcan
@@ -63,7 +63,7 @@
                     <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
 
                     </i>
-                    {{ trans('cruds.test.title') }}
+                    {{ trans('Tests') }}
                 </a>
             </li>
         @endcan
@@ -73,7 +73,7 @@
                     <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
 
                     </i>
-                    {{ trans('cruds.client.title') }}
+                    {{ trans('Patients') }}
                 </a>
             </li>
         @endcan
@@ -83,7 +83,7 @@
                     <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
 
                     </i>
-                    {{ trans('cruds.appointment.title') }}
+                    {{ trans('Appointments') }}
                 </a>
             </li>
         @endcan
@@ -92,7 +92,7 @@
                 <i class="c-sidebar-nav-icon fa-fw fas fa-calendar">
 
                 </i>
-                {{ trans('global.systemCalendar') }}
+                {{ trans('System Calendar') }}
             </a>
         </li>
         @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
@@ -101,7 +101,7 @@
                     <a class="c-sidebar-nav-link {{ request()->is('profile/password') || request()->is('profile/password/*') ? 'c-active' : '' }}" href="{{ route('profile.password.edit') }}">
                         <i class="fa-fw fas fa-key c-sidebar-nav-icon">
                         </i>
-                        {{ trans('global.change_password') }}
+                        {{ trans('Change password') }}
                     </a>
                 </li>
             @endcan
@@ -111,7 +111,7 @@
                 <i class="c-sidebar-nav-icon fas fa-fw fa-sign-out-alt">
 
                 </i>
-                {{ trans('global.logout') }}
+                {{ trans('Logout') }}
             </a>
         </li>
     </ul>

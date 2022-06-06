@@ -4,14 +4,14 @@
     <div style="margin-bottom: 10px;" class="row">
         <div class="col-lg-12">
             <a class="btn btn-success" href="{{ route('admin.roles.create') }}">
-                {{ trans('global.add') }} {{ trans('cruds.role.title_singular') }}
+                {{ trans('add') }} {{ trans('role') }}
             </a>
         </div>
     </div>
 @endcan
 <div class="card">
     <div class="card-header">
-        {{ trans('cruds.role.title_singular') }} {{ trans('global.list') }}
+        {{ trans('roles') }} {{ trans('list') }}
     </div>
 
     <div class="card-body">
@@ -22,13 +22,13 @@
 
                     </th>
                     <th>
-                        {{ trans('cruds.role.fields.id') }}
+                        {{ trans('role id') }}
                     </th>
                     <th>
-                        {{ trans('cruds.role.fields.title') }}
+                        {{ trans('title') }}
                     </th>
                     <th>
-                        {{ trans('cruds.role.fields.permissions') }}
+                        {{ trans('permissions') }}
                     </th>
                     <th>
                         &nbsp;
@@ -48,7 +48,7 @@
     $(function () {
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
 @can('role_delete')
-  let deleteButtonTrans = '{{ trans('global.datatables.delete') }}';
+  let deleteButtonTrans = '{{ trans('delete') }}';
   let deleteButton = {
     text: deleteButtonTrans,
     url: "{{ route('admin.roles.massDestroy') }}",
@@ -100,7 +100,7 @@
       $($.fn.dataTable.tables(true)).DataTable()
           .columns.adjust();
   });
-  
+
 });
 
 </script>

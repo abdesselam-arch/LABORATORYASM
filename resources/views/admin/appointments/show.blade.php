@@ -3,21 +3,21 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} {{ trans('cruds.appointment.title') }}
+        {{ trans('Show') }} {{ trans('appointments') }}
     </div>
 
     <div class="card-body">
         <div class="form-group">
             <div class="form-group">
                 <a class="btn btn-default" href="{{ route('admin.appointments.index') }}">
-                    {{ trans('global.back_to_list') }}
+                    {{ trans('back to list') }}
                 </a>
             </div>
             <table class="table table-bordered table-striped">
                 <tbody>
                     <tr>
                         <th>
-                            {{ trans('cruds.appointment.fields.id') }}
+                            {{ trans('id') }}
                         </th>
                         <td>
                             {{ $appointment->id }}
@@ -25,7 +25,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.appointment.fields.client') }}
+                            {{ trans('patient') }}
                         </th>
                         <td>
                             {{ $appointment->client->name ?? '' }}
@@ -33,7 +33,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.appointment.fields.admin') }}
+                            {{ trans('admin') }}
                         </th>
                         <td>
                             {{ $appointment->admin->name ?? '' }}
@@ -41,7 +41,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.appointment.fields.start_time') }}
+                            {{ trans('start time') }}
                         </th>
                         <td>
                             {{ $appointment->start_time }}
@@ -49,7 +49,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.appointment.fields.finish_time') }}
+                            {{ trans('finish time') }}
                         </th>
                         <td>
                             {{ $appointment->finish_time }}
@@ -57,7 +57,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.appointment.fields.tests') }}
+                            {{ trans('tests') }}
                         </th>
                         <td>
                             @foreach($appointment->tests as $key => $tests)
@@ -67,7 +67,7 @@
                     </tr>
                     <tr>
                         <th>
-                            {{ trans('cruds.appointment.fields.comments') }}
+                            {{ trans('comments') }}
                         </th>
                         <td>
                             {{ $appointment->comments }}
@@ -77,7 +77,7 @@
             </table>
             <div class="form-group">
                 <a class="btn btn-default" href="{{ route('admin.appointments.index') }}">
-                    {{ trans('global.back_to_list') }}
+                    {{ trans('back to list') }}
                 </a>
             </div>
         </div>
