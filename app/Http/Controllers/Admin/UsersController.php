@@ -21,7 +21,7 @@ class UsersController extends Controller
 
         if ($request->ajax()) {
             $query = User::with(['roles'])->select(sprintf('%s.*', (new User())->table));
-            $table = Datatables::of($query);
+            $table = DataTables::of($query);
 
             $table->addColumn('placeholder', '&nbsp;');
             $table->addColumn('actions', '&nbsp;');

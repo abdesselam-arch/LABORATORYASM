@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ trans('panel.site_title') }}</title>
+    <title>{{ trans('ASM LAB') }}</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
     <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" rel="stylesheet" />
@@ -33,7 +33,7 @@
                 <i class="fas fa-fw fa-bars"></i>
             </button>
 
-            <a class="c-header-brand d-lg-none" href="#">{{ trans('panel.site_title') }}</a>
+            <a class="c-header-brand d-lg-none" href="#">{{ trans('LABORATOIRE ASM') }}</a>
 
             <button class="c-header-toggler mfs-3 d-md-down-none" type="button" responsive="true">
                 <i class="fas fa-fw fa-bars"></i>
@@ -113,14 +113,14 @@
     <script src="{{ asset('js/main.js') }}"></script>
     <script>
         $(function() {
-  let copyButtonTrans = '{{ trans('global.datatables.copy') }}'
-  let csvButtonTrans = '{{ trans('global.datatables.csv') }}'
-  let excelButtonTrans = '{{ trans('global.datatables.excel') }}'
-  let pdfButtonTrans = '{{ trans('global.datatables.pdf') }}'
-  let printButtonTrans = '{{ trans('global.datatables.print') }}'
-  let colvisButtonTrans = '{{ trans('global.datatables.colvis') }}'
-  let selectAllButtonTrans = '{{ trans('global.select_all') }}'
-  let selectNoneButtonTrans = '{{ trans('global.deselect_all') }}'
+  let copyButtonTrans = '{{ trans('copy') }}'
+  let csvButtonTrans = '{{ trans('csv') }}'
+  let excelButtonTrans = '{{ trans('excel') }}'
+  let pdfButtonTrans = '{{ trans('pdf') }}'
+  let printButtonTrans = '{{ trans('print') }}'
+  let colvisButtonTrans = '{{ trans('colvis') }}'
+  let selectAllButtonTrans = '{{ trans('select all') }}'
+  let selectNoneButtonTrans = '{{ trans('deselect all') }}'
 
   let languages = {
     'fr': 'https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/French.json'

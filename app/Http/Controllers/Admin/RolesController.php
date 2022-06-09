@@ -21,7 +21,7 @@ class RolesController extends Controller
 
         if ($request->ajax()) {
             $query = Role::with(['permissions'])->select(sprintf('%s.*', (new Role())->table));
-            $table = Datatables::of($query);
+            $table = DataTables::of($query);
 
             $table->addColumn('placeholder', '&nbsp;');
             $table->addColumn('actions', '&nbsp;');

@@ -60,7 +60,7 @@
     $(function () {
   let dtButtons = $.extend(true, [], $.fn.dataTable.defaults.buttons)
 @can('appointment_delete')
-  let deleteButtonTrans = '{{ trans('global.datatables.delete') }}';
+  let deleteButtonTrans = '{{ trans('delete') }}';
   let deleteButton = {
     text: deleteButtonTrans,
     url: "{{ route('admin.appointments.massDestroy') }}",
@@ -71,12 +71,12 @@
       });
 
       if (ids.length === 0) {
-        alert('{{ trans('global.datatables.zero_selected') }}')
+        alert('{{ trans('zero selected') }}')
 
         return
       }
 
-      if (confirm('{{ trans('global.areYouSure') }}')) {
+      if (confirm('{{ trans('are you sure !') }}')) {
         $.ajax({
           headers: {'x-csrf-token': _token},
           method: 'POST',

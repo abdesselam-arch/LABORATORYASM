@@ -2,7 +2,7 @@
 
     <div class="c-sidebar-brand d-md-down-none">
         <a class="c-sidebar-brand-full h4" href="#">
-            {{ trans('LABORATORY ASM') }}
+            {{ trans('LABORATOIRE ASM') }}
         </a>
     </div>
 
@@ -12,7 +12,7 @@
                 <i class="c-sidebar-nav-icon fas fa-fw fa-tachometer-alt">
 
                 </i>
-                {{ trans('Dashboard') }}
+                {{ trans('Accueil') }}
             </a>
         </li>
         @can('user_management_access')
@@ -21,7 +21,7 @@
                     <i class="fa-fw fas fa-users c-sidebar-nav-icon">
 
                     </i>
-                    {{ trans('user Management') }}
+                    {{ trans('Gestion des utilisateurs') }}
                 </a>
                 <ul class="c-sidebar-nav-dropdown-items">
                     @can('permission_access')
@@ -40,7 +40,7 @@
                                 <i class="fa-fw fas fa-briefcase c-sidebar-nav-icon">
 
                                 </i>
-                                {{ trans('Roles') }}
+                                {{ trans('Rôles') }}
                             </a>
                         </li>
                     @endcan
@@ -50,7 +50,7 @@
                                 <i class="fa-fw fas fa-user c-sidebar-nav-icon">
 
                                 </i>
-                                {{ trans('Users') }}
+                                {{ trans('Utilisateurs') }}
                             </a>
                         </li>
                     @endcan
@@ -63,7 +63,7 @@
                     <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
 
                     </i>
-                    {{ trans('Tests') }}
+                    {{ trans('Analyses') }}
                 </a>
             </li>
         @endcan
@@ -83,7 +83,17 @@
                     <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
 
                     </i>
-                    {{ trans('Appointments') }}
+                    {{ trans('Rendez-vous') }}
+                </a>
+            </li>
+        @endcan
+        @can('test_access')
+            <li class="c-sidebar-nav-item">
+                <a href="{{ route("admin.tests.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/tests") || request()->is("admin/tests/*") ? "c-active" : "" }}">
+                    <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
+
+                    </i>
+                    {{ trans('Résultats') }}
                 </a>
             </li>
         @endcan
@@ -92,7 +102,7 @@
                 <i class="c-sidebar-nav-icon fa-fw fas fa-calendar">
 
                 </i>
-                {{ trans('System Calendar') }}
+                {{ trans('Calendrier') }}
             </a>
         </li>
         @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
@@ -101,7 +111,7 @@
                     <a class="c-sidebar-nav-link {{ request()->is('profile/password') || request()->is('profile/password/*') ? 'c-active' : '' }}" href="{{ route('profile.password.edit') }}">
                         <i class="fa-fw fas fa-key c-sidebar-nav-icon">
                         </i>
-                        {{ trans('Change password') }}
+                        {{ trans('Profil personnel') }}
                     </a>
                 </li>
             @endcan
@@ -111,7 +121,7 @@
                 <i class="c-sidebar-nav-icon fas fa-fw fa-sign-out-alt">
 
                 </i>
-                {{ trans('Logout') }}
+                {{ trans('Déconnecter') }}
             </a>
         </li>
     </ul>
