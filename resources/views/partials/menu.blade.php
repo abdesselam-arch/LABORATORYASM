@@ -87,16 +87,6 @@
                 </a>
             </li>
         @endcan
-        @can('test_access')
-            <li class="c-sidebar-nav-item">
-                <a href="{{ route("admin.tests.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/tests") || request()->is("admin/tests/*") ? "c-active" : "" }}">
-                    <i class="fa-fw fas fa-cogs c-sidebar-nav-icon">
-
-                    </i>
-                    {{ trans('Résultats') }}
-                </a>
-            </li>
-        @endcan
         <li class="c-sidebar-nav-item">
             <a href="{{ route("admin.systemCalendar") }}" class="c-sidebar-nav-link {{ request()->is("admin/system-calendar") || request()->is("admin/system-calendar/*") ? "c-active" : "" }}">
                 <i class="c-sidebar-nav-icon fa-fw fas fa-calendar">

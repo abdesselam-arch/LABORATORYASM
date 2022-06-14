@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 //Route::redirect('/', '/login');
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 Route::get('/home', function () {
     if (session('status')) {
@@ -46,6 +46,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::get('system-calendar', 'SystemCalendarController@index')->name('systemCalendar');
 });
+
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
     // Change password
     if (file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php'))) {
