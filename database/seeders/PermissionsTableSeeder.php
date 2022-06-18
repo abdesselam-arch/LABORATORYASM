@@ -139,6 +139,26 @@ class PermissionsTableSeeder extends Seeder
                 'id'    => 32,
                 'title' => 'profile_password_edit',
             ],
+            [
+                'id'    => 33,
+                'title' => 'resultat_access',
+            ],
+            [
+                'id'    => 34,
+                'title' => 'resultat_edit',
+            ],
+            [
+                'id'    => 35,
+                'title' => 'resultat_create',
+            ],
+            [
+                'id'    => 36,
+                'title' => 'resultat_delete',
+            ],
+            [
+                'id'    => 37,
+                'title' => 'resultat_show',
+            ],
         ]);
     }
 }
